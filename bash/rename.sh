@@ -1,0 +1,6 @@
+for filename in *; do
+	newName=${PWD##*/}
+	oldName=${filename%%.*}
+	extension=${filename#*.}
+	mv ${oldName}.${extension} ${newName}.${extension}
+done

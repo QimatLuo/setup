@@ -1,0 +1,74 @@
+# adb
+alias adbs='adb shell screencap -p | perl -pe "s/\x0D\x0A/\x0A/g" > screen.png'
+alias adbp='adb shell input keyevent KEYCODE_WAKEUP;adb shell input swipe 500 1500 500 500'
+
+# ionic
+alias icb='ionic cordova build'
+alias icba='ionic cordova build android'
+alias icbap='ionic cordova build android --prod'
+alias icbi='ionic cordova build ios'
+alias icbip='ionic cordova build ios --prod'
+alias ichaa='ionic cordova hooks add android'
+alias ichai='ionic cordova hooks add ios'
+alias ichra='ionic cordova hooks remove android'
+alias ichri='ionic cordova hooks remove ios'
+alias icpa='ionic cordova plugin add'
+alias icpl='ionic cordova plugin list'
+alias icpr='ionic cordova plugin rm'
+alias icpaa='ionic cordova platform add android'
+alias icpai='ionic cordova platform add ios'
+alias icpra='ionic cordova platform rm android'
+alias icpri='ionic cordova platform rm ios'
+alias icr='ionic cordova resources'
+alias icra='ionic cordova run android --device'
+alias icrap='ionic cordova run android --device --prod'
+alias is='ionic serve -b'
+
+# custom
+alias aptug='sudo apt-get update && sudo apt-get upgrade'
+alias g='git'
+alias p='ping www.google.com'
+alias rp='rsync -aP'
+
+# exosite
+alias blog='ssh qimatluo@sandbox-01.exosite.biz tail --follow /var/log/apache2/qimatluo-error.log'
+alias ci='curl https://i.exosite.com/ --insecure --max-time 30'
+alias exodev='exo --host=m2-dev.exosite.com '
+alias rdp='rdesktop -a 16 -g 1280x1024 -r sound:local '
+alias sb='ssh -L 127.0.0.1:9443:127.0.0.1:9443 -L 127.0.0.1:9080:127.0.0.1:9080 portals-dev-000.exosite.biz'
+alias sc='. ~/Documents/portals_sync qimatluo ~/projects/portals'
+alias gu='gulp upload'
+
+# ls
+alias la='ls -Ad .*'
+alias ll='ls -lFh'
+alias lla='ls -AdlhSr .*'
+
+# grep
+temp='grep'
+temp="$temp --binary-files=without-match"
+temp="$temp --color=auto"
+temp="$temp --exclude-dir=.git"
+temp="$temp --exclude-dir=.npm"
+temp="$temp --exclude-dir=logs"
+temp="$temp --exclude-dir=node_modules"
+temp="$temp --exclude=*.map"
+temp="$temp --exclude=.luacheckcache"
+alias grep=$temp
+
+# bashrc
+bind '"\ek":history-search-backward'
+bind '"\ej":history-search-forward'
+bind '"\eh":backward-char'
+bind '"\el":forward-char'
+
+# xclip
+alias xi='xclip -i -selection clipboard'
+
+# env
+ANDROID_HOME="${HOME}/Documents/android-sdk"
+PATH="${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:$ANDROID_HOME/platform-tools"
+PATH="${PATH}:${HOME}/.luarocks/bin"
+
+# color
+export TERM=xterm-256color

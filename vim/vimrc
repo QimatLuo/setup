@@ -1,0 +1,52 @@
+" Vundle {===
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+
+" vim-snipmate
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+
+Plugin 'editorconfig/editorconfig-vim'
+
+Plugin 'HerringtonDarkholme/yats.vim'
+
+Plugin 'posva/vim-vue'
+Plugin 'michaeljsmith/vim-indent-object'
+
+call vundle#end()
+filetype plugin indent on
+" ===} Vundle
+
+set colorcolumn=81
+set encoding=utf-8
+set hlsearch
+set ruler
+set ignorecase
+set incsearch
+set nowrap
+set relativenumber
+set shiftwidth=4
+set tabstop=4
+set t_Co=256
+set synmaxcol=120
+if &diff
+	set background=light
+else
+	set background=dark
+endif
+
+autocmd Filetype php setlocal ts=2 sw=2 expandtab
+
+syntax on
+
+so ~/github/QimatLuo/Setting/vim/map.vim
+so ~/github/QimatLuo/Setting/vim/highlight.vim
+so ~/github/QimatLuo/Setting/vim/DiffText.vim
+so ~/github/QimatLuo/Setting/vim/GitMergetool.vim
+so ~/github/QimatLuo/Setting/vim/tabline.vim
+so ~/github/QimatLuo/Setting/vim/osx.vim

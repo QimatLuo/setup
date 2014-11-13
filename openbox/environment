@@ -1,0 +1,10 @@
+# git setting
+LC_ALL="en_US.UTF-8"
+export LC_ALL
+
+# termail 256 color
+TERM=${TERM%-256color}
+
+# gulp upload account
+export EXO_W_USER=""
+export EXO_W_PASS=""

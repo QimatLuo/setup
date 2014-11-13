@@ -1,0 +1,22 @@
+{
+	"multistr": true,
+	"predef": [
+		"$",
+		"angular",
+		"atob",
+		"AudioContext",
+		"btoa",
+		"c3",
+		"cordova",
+		"document",
+		"d3",
+		"google",
+		"ionic",
+		"localStorage",
+		"window",
+		"Uint8Array"
+	],
+	"strict": true,
+	"undef": true,
+	"validthis": true
+}
