@@ -22,3 +22,5 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if which ruby >/dev/null && which gem >/dev/null; then
     PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
+
+export SDKMANAGER_OPTS="--add-modules java.se.ee"
