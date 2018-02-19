@@ -23,5 +23,5 @@ if which ruby >/dev/null && which gem >/dev/null; then
     PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
 
-export SDKMANAGER_OPTS="--add-modules java.se.ee"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/
+export PS1="\d \t \W\$ "
