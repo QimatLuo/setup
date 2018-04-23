@@ -25,3 +25,4 @@ fi
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/
 export PS1="\[\033[0;37m\]\d \t \W\$ \[\033[0m\]"
+export GPG_TTY=$(tty)
