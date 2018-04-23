@@ -6,6 +6,6 @@ base=$1
 head=`git rev-parse --abbrev-ref HEAD`
 pr=`curl -X POST -u $user:$token "https://api.github.com/repos/$owner/$repo/pulls" -d '{"title":"'$head'","body":"PR sent via github api","head":"'$head'","base":"'$base'"}'`
 echo $pr
-number=`echo $pr | grep '^  "number":' | awk '{print $2}' | sed 's/,//'`
+number=`echo $pr | awk -F '"number": ' '{print $2}' | cut -d',' -f1`
 curl -X PATCH -u $user:$token "https://api.github.com/repos/$owner/$repo/issues/$number" -d '{"assignees":["'$user'"]}'
 curl -X POST -u $user:$token "https://api.github.com/repos/$owner/$repo/pulls/$number/requested_reviewers" -d '{"reviewers":["akiratsai"]}'
