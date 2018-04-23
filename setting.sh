@@ -24,6 +24,12 @@ if [[ `uname` == 'Darwin' ]]; then
     rm $file
   fi
   ln -s "$PWD/mac/bash_profile" $file
+
+  file="$HOME/.export"
+  if [[ -f $file ]]; then
+    rm $file
+  fi
+  ln -s "$PWD/mac/export" $file
 fi
 
 bash "$PWD/vim/install.sh"
