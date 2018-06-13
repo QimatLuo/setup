@@ -33,7 +33,7 @@ set relativenumber
 set shiftwidth=4
 set tabstop=4
 set t_Co=256
-set synmaxcol=120
+set synmaxcol=250
 if &diff
 	set background=light
 else
