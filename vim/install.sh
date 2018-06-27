@@ -13,12 +13,6 @@ if [[ -f $file ]]; then
 fi
 ln -s ".editorconfig" $file
 
-file="$HOME/.vim/.jshintrc"
-if [[ -f $file ]]; then
-	rm $file
-fi
-ln -s "$path/jshintrc" $file
-
 file="$HOME/.vim/bundle/Vundle.vim"
 if [[ ! -f $file ]]; then
   git clone https://github.com/gmarik/Vundle.vim.git $file
@@ -30,3 +24,9 @@ if [[ -f $file ]]; then
 	rm $file
 fi
 ln -s "$path/javascript.snippets" $file
+
+file="$HOME/.vim/.jshintrc"
+if [[ -f $file ]]; then
+	rm $file
+fi
+ln -s "$path/jshintrc" $file

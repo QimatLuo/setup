@@ -1,26 +1,20 @@
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-source "$HOME"/.bashrc
-source "$HOME"/.bash_aliases
+if [ -f "$HOME"/.bashrc ]; then
+	source "$HOME"/.bashrc
+fi
+if [ -f "$HOME"/.bash_aliases ]; then
+	source "$HOME"/.bash_aliases
+fi
 if [ -f "$HOME"/github/QimatLuo/Setting/git/git-completion.bash ]; then
   source "$HOME"/github/QimatLuo/Setting/git/git-completion.bash
 fi
 if [ -f "$HOME"/github/QimatLuo/Setting/tmux/bash_completion_tmux.sh ]; then
   source "$HOME"/github/QimatLuo/Setting/tmux/bash_completion_tmux.sh
 fi
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-	. $(brew --prefix)/etc/bash_completion
-fi
 if [ -f "$HOME"/.export ]; then
   source "$HOME"/.export
 fi
 if [ -f "$HOME"/.bash_private ]; then
   source "$HOME"/.bash_private
-fi
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-if which ruby >/dev/null && which gem >/dev/null; then
-    PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi

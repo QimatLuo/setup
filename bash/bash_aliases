@@ -25,19 +25,8 @@ alias icrap='ionic cordova run android --device --prod'
 alias is='ionic serve -b'
 
 # custom
-alias aptug='sudo apt-get update && sudo apt-get upgrade'
-alias g='git'
 alias p='ping www.google.com'
 alias rp='rsync -aP'
-
-# exosite
-alias blog='ssh qimatluo@sandbox-01.exosite.biz tail --follow /var/log/apache2/qimatluo-error.log'
-alias ci='curl https://i.exosite.com/ --insecure --max-time 30'
-alias exodev='exo --host=m2-dev.exosite.com '
-alias rdp='rdesktop -a 16 -g 1280x1024 -r sound:local '
-alias sb='ssh -L 127.0.0.1:9443:127.0.0.1:9443 -L 127.0.0.1:9080:127.0.0.1:9080 portals-dev-000.exosite.biz'
-alias sc='. ~/Documents/portals_sync qimatluo ~/projects/portals'
-alias gu='gulp upload'
 
 # ls
 alias la='ls -Ad .*'
@@ -64,11 +53,3 @@ bind '"\el":forward-char'
 
 # xclip
 alias xi='xclip -i -selection clipboard'
-
-# env
-ANDROID_HOME="${HOME}/Documents/android-sdk"
-PATH="${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:$ANDROID_HOME/platform-tools"
-PATH="${PATH}:${HOME}/.luarocks/bin"
-
-# color
-export TERM=xterm-256color

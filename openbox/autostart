@@ -1,4 +1,0 @@
-#!/bin/bash
-
-numlockx &
-xsetroot -bg "#000000" &

@@ -1,4 +1,3 @@
 export GPG_TTY=$(tty)
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/
-export PATH="$PATH:$HOME/Library/Python/2.7/bin"
 export PS1="\[\033[0;37m\]\d \t \W\$ \[\033[0m\]"
+export TERM=xterm-256color

@@ -1,5 +1,0 @@
-- host: all
-  sudo: yes
-  tasks:
-      - name: install
-      apt: name=vagrant

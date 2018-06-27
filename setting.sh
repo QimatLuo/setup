@@ -1,5 +1,3 @@
-#ln -s "$PWD/openbox "$HOME/.config
-
 file="$HOME/.bash_aliases"
 if [[ -f $file ]]; then
 	rm $file
@@ -31,6 +29,3 @@ if [[ `uname` == 'Darwin' ]]; then
   fi
   ln -s "$PWD/mac/export" $file
 fi
-
-bash "$PWD/vim/install.sh"
-bash "$PWD/node/npm.sh"
