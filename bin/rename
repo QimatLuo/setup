@@ -1,3 +1,5 @@
+#!/bin/bash
+
 for filename in *; do
 	newName=${PWD##*/}
 	oldName=${filename%%.*}

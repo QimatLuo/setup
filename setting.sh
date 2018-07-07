@@ -1,31 +1,27 @@
 file="$HOME/.bash_aliases"
-if [[ -f $file ]]; then
-	rm $file
-fi
-ln -s "$PWD/bash/bash_aliases" $file
+rm $file
+ln -s "$PWD/home/bash_aliases" $file
 
 file="$HOME/.gitconfig"
-if [[ -f $file ]]; then
-	rm $file
-fi
+rm $file
 ln -s "$PWD/git/gitconfig" $file
 
 file="$HOME/.tmux.conf"
-if [[ -f $file ]]; then
-	rm $file
-fi
+rm $file
 ln -s "$PWD/tmux/tmux.conf" $file
 
-if [[ `uname` == 'Darwin' ]]; then
-  file="$HOME/.bash_profile"
-  if [[ -f $file ]]; then
-    rm $file
-  fi
-  ln -s "$PWD/mac/bash_profile" $file
+file="$HOME/.bash_profile"
+rm $file
+ln -s "$PWD/home/bash_profile" $file
 
-  file="$HOME/.export"
-  if [[ -f $file ]]; then
-    rm $file
-  fi
-  ln -s "$PWD/mac/export" $file
+file="$HOME/.export"
+rm $file
+ln -s "$PWD/home/export" $file
+
+if [[ `uname` == 'Darwin' ]]; then
+  file="$HOME/.bashrc"
+  rm $file
+  ln -s "$PWD/home/bashrc" $file
 fi
+
+source vim/install.sh
