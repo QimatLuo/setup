@@ -17,6 +17,7 @@ Plugin 'HerringtonDarkholme/yats.vim'
 
 Plugin 'posva/vim-vue'
 Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'infoslack/vim-docker'
 
 call vundle#end()
 filetype plugin indent on
