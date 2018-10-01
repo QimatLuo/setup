@@ -5,3 +5,4 @@ export TERM=xterm-256color
 if [ -f "$HOME"/.bash_aliases ]; then
 	source "$HOME"/.bash_aliases
 fi
+sysctl machdep.xcpm.cpu_thermal_level
