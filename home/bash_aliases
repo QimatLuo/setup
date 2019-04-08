@@ -44,6 +44,7 @@ temp="$temp --exclude-dir=node_modules"
 temp="$temp --exclude=*.map"
 temp="$temp --exclude=.luacheckcache"
 alias grep=$temp
+alias ggrep='ggrep --color=auto'
 
 # bashrc
 bind '"\ek":history-search-backward'

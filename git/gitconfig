@@ -33,7 +33,7 @@
 	cpc = cherry-pick --continue
 	d = diff
 	dc = diff --cached
-	f = fetch -p
+	f = fetch -p --all
 	l = log --decorate
 	lp = log --decorate --oneline --first-parent
 	lt = log --decorate --oneline --graph

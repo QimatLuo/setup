@@ -21,4 +21,6 @@ if [ $repo == 'hamv_admin' ]; then reviewer='raywang2'; fi
 if [ $repo == 'hamv_mobile' ]; then reviewer='raywang2'; fi
 if [ $repo == 'hamv_mobile_engine' ]; then reviewer='raywang2'; fi
 if [ $repo == 'Parker-IQAN-Solution' ]; then reviewer='ophentis'; fi
-curl -X POST -u $user:$token "https://api.github.com/repos/$owner/$repo/pulls/$number/requested_reviewers" -d '{"reviewers":["'$reviewer'"]}'
+if [ -n "$reviewer" ]; then
+  curl -X POST -u $user:$token "https://api.github.com/repos/$owner/$repo/pulls/$number/requested_reviewers" -d '{"reviewers":["'$reviewer'"]}'
+fi
