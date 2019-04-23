@@ -1,5 +1,4 @@
 export GPG_TTY=$(tty)
-export PATH="$PATH:$HOME/github/Qimatluo/Setting/bin"
+export PATH="/usr/local/sbin:$PATH:$HOME/github/Qimatluo/Setting/bin"
 export PS1="\[\033[0;37m\]\d \t \W\$ \[\033[0m\]"
-PATH="$PATH:$HOME/Documents/android-sdk/platform-tools"
-ANDROID_HOME="$HOME/Documents/android-sdk"
+ANDROID_HOME=/usr/local/share/android-sdk
