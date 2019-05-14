@@ -1,3 +1,5 @@
+#!/bin/bash
+
 token=$GITHUB_PERSONAL_ACCESS_TOKEN
 user='qimatluo'
 owner=`git remote -v | head -1 | cut -f2 | cut -d'/' -f1 | cut -d':' -f2`
@@ -15,5 +17,10 @@ if [ $repo == 'Parker-FTP-Mobile-App' ]; then reviewer='akiratsai'; fi
 if [ $repo == 'Parker-FTP-Seed' ]; then reviewer='akiratsai'; fi
 if [ $repo == 'Parker-FTP-Solution-Platform' ]; then reviewer='akiratsai'; fi
 if [ $repo == 'hamv_cloud' ]; then reviewer='henryloexo'; fi
-if [ $repo == 'hamv_admin' ]; then reviewer='tinashih'; fi
-curl -X POST -u $user:$token "https://api.github.com/repos/$owner/$repo/pulls/$number/requested_reviewers" -d '{"reviewers":["'$reviewer'"]}'
+if [ $repo == 'hamv_admin' ]; then reviewer='raywang2'; fi
+if [ $repo == 'hamv_mobile' ]; then reviewer='raywang2'; fi
+if [ $repo == 'hamv_mobile_engine' ]; then reviewer='raywang2'; fi
+if [ $repo == 'Parker-IQAN-Solution' ]; then reviewer='ophentis'; fi
+if [ -n "$reviewer" ]; then
+  curl -X POST -u $user:$token "https://api.github.com/repos/$owner/$repo/pulls/$number/requested_reviewers" -d '{"reviewers":["'$reviewer'"]}'
+fi

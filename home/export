@@ -1,0 +1,6 @@
+export GPG_TTY=$(tty)
+export PATH="/usr/local/sbin:$PATH:$HOME/github/Qimatluo/Setting/bin"
+export PS1="\[\033[0;37m\]\d \t \W\$ \[\033[0m\]"
+ANDROID_HOME=/usr/local/share/android-sdk
+export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
+PATH=${JAVA_HOME}/bin:${PATH}

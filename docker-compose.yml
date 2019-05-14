@@ -1,0 +1,8 @@
+version: "3"
+services:
+    vm:
+        build: .
+        stdin_open: true
+        tty: true
+        volumes:
+            - ${HOME}:${HOME}

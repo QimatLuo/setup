@@ -1,10 +1,5 @@
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
 if [ -f "$HOME"/.bashrc ]; then
 	source "$HOME"/.bashrc
-fi
-if [ -f "$HOME"/.bash_aliases ]; then
-	source "$HOME"/.bash_aliases
 fi
 if [ -f "$HOME"/github/QimatLuo/Setting/git/git-completion.bash ]; then
   source "$HOME"/github/QimatLuo/Setting/git/git-completion.bash

@@ -13,10 +13,11 @@ Plugin 'honza/vim-snippets'
 
 Plugin 'editorconfig/editorconfig-vim'
 
-Plugin 'HerringtonDarkholme/yats.vim'
+Plugin 'leafgarland/typescript-vim'
 
 Plugin 'posva/vim-vue'
 Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'infoslack/vim-docker'
 
 call vundle#end()
 filetype plugin indent on
@@ -30,8 +31,8 @@ set ignorecase
 set incsearch
 set nowrap
 set relativenumber
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set expandtab
 set t_Co=256
 set synmaxcol=250
 if &diff
@@ -39,8 +40,6 @@ if &diff
 else
 	set background=dark
 endif
-
-autocmd Filetype php setlocal ts=2 sw=2 expandtab
 
 syntax on
 
