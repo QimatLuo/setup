@@ -1,15 +1,18 @@
-if [ -f "$HOME"/.bashrc ]; then
-	source "$HOME"/.bashrc
-fi
-if [ -f "$HOME"/github/QimatLuo/Setting/git/git-completion.bash ]; then
-  source "$HOME"/github/QimatLuo/Setting/git/git-completion.bash
-fi
-if [ -f "$HOME"/github/QimatLuo/Setting/tmux/bash_completion_tmux.sh ]; then
-  source "$HOME"/github/QimatLuo/Setting/tmux/bash_completion_tmux.sh
-fi
-if [ -f "$HOME"/.export ]; then
-  source "$HOME"/.export
-fi
-if [ -f "$HOME"/.bash_private ]; then
-  source "$HOME"/.bash_private
-fi
+files=(
+  "$(brew --prefix)/etc/profile.d/bash_completion.sh"
+  "${HOME}/.bash_aliases"
+  "${HOME}/.export"
+  "${HOME}/.private"
+)
+for file in ${files[@]}; do
+  if [ -r $file ]; then
+    source $file
+  fi
+done
+
+bind '"\eh":backward-char'
+bind '"\ej":history-search-forward'
+bind '"\ek":history-search-backward'
+bind '"\el":forward-char'
+
+sysctl machdep.xcpm.cpu_thermal_level

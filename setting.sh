@@ -1,27 +1,21 @@
-file="$HOME/.bash_aliases"
-rm $file
-ln -s "$PWD/home/bash_aliases" $file
-
-file="$HOME/.gitconfig"
-rm $file
-ln -s "$PWD/git/gitconfig" $file
-
-file="$HOME/.tmux.conf"
-rm $file
-ln -s "$PWD/tmux/tmux.conf" $file
-
-file="$HOME/.bash_profile"
-rm $file
-ln -s "$PWD/home/bash_profile" $file
-
-file="$HOME/.export"
-rm $file
-ln -s "$PWD/home/export" $file
-
-if [[ `uname` == 'Darwin' ]]; then
-  file="$HOME/.bashrc"
-  rm $file
-  ln -s "$PWD/home/bashrc" $file
-fi
+source=(
+  "${PWD}/home/bash_aliases"
+  "${PWD}/home/bash_profile"
+  "${PWD}/home/export"
+  "${PWD}/git/gitconfig"
+  "${PWD}/tmux/tmux.conf"
+)
+target=(
+  "${HOME}/.bash_aliases"
+  "${HOME}/.bash_profile"
+  "${HOME}/.export"
+  "${HOME}/.gitconfig"
+  "${HOME}/.tmux.conf"
+)
+for ((i=0; i<${#target[@]}; i++)); do
+  mail -s "Log file" ${admins[$i]} < $mylog
+  rm ${target[$i]}
+  ln -s ${source[$i]} ${target[$i]}
+done
 
 source vim/install.sh

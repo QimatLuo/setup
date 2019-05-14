@@ -2,28 +2,6 @@
 alias adbs='adb shell screencap -p | perl -pe "s/\x0D\x0A/\x0A/g" > screen.png'
 alias adbp='adb shell input keyevent KEYCODE_WAKEUP;adb shell input swipe 500 1500 500 500'
 
-# ionic
-alias icb='ionic cordova build'
-alias icba='ionic cordova build android'
-alias icbap='ionic cordova build android --prod'
-alias icbi='ionic cordova build ios'
-alias icbip='ionic cordova build ios --prod'
-alias ichaa='ionic cordova hooks add android'
-alias ichai='ionic cordova hooks add ios'
-alias ichra='ionic cordova hooks remove android'
-alias ichri='ionic cordova hooks remove ios'
-alias icpa='ionic cordova plugin add'
-alias icpl='ionic cordova plugin list'
-alias icpr='ionic cordova plugin rm'
-alias icpaa='ionic cordova platform add android'
-alias icpai='ionic cordova platform add ios'
-alias icpra='ionic cordova platform rm android'
-alias icpri='ionic cordova platform rm ios'
-alias icr='ionic cordova resources'
-alias icra='ionic cordova run android --device'
-alias icrap='ionic cordova run android --device --prod'
-alias is='ionic serve -b'
-
 # custom
 alias p='ping www.google.com'
 alias rp='rsync -aP'
@@ -45,12 +23,6 @@ temp="$temp --exclude=*.map"
 temp="$temp --exclude=.luacheckcache"
 alias grep=$temp
 alias ggrep='ggrep --color=auto'
-
-# bashrc
-bind '"\ek":history-search-backward'
-bind '"\ej":history-search-forward'
-bind '"\eh":backward-char'
-bind '"\el":forward-char'
 
 # xclip
 alias xi='xclip -i -selection clipboard'
