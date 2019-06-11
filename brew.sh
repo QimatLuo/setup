@@ -16,16 +16,16 @@ brew cask install \
 
 # android
 brew tap caskroom/versions
-brew update
-brew install \
-  gradle
 brew cask install \
   adoptopenjdk8 \
   android-sdk
+brew install \
+  gradle
 
 # personal
+brew install \
+  youtube-dl
 brew cask install \
   steam \
   vlc \
-  vysor \
-  youtube-dl
+  vysor
