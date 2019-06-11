@@ -32,6 +32,7 @@ set incsearch
 set nowrap
 set relativenumber
 set shiftwidth=2
+set tabstop=2
 set expandtab
 set t_Co=256
 set synmaxcol=250

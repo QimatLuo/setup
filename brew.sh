@@ -1,8 +1,31 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # general
-brew install vim git grep tmux node gradle
-brew cask install docker slack keybase steam google-chrome vlc
+brew install \
+  bash-completion \
+  git \
+  gpg \
+  grep \
+  node \
+  tmux \
+  vim
+brew cask install \
+  docker \
+  google-chrome \
+  keybase
 
 # android
-brew cask install adoptopenjdk8
+brew tap caskroom/versions
+brew update
+brew install \
+  gradle
+brew cask install \
+  adoptopenjdk8 \
+  android-sdk
+
+# personal
+brew cask install \
+  steam \
+  vlc \
+  vysor \
+  youtube-dl
