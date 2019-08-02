@@ -6,7 +6,7 @@ brew install \
   git \
   gpg \
   grep \
-  node \
+  node@10 \
   tmux \
   vim
 brew cask install \
@@ -18,14 +18,7 @@ brew cask install \
 brew tap caskroom/versions
 brew cask install \
   adoptopenjdk8 \
-  android-sdk
+  android-sdk \
+  vysor
 brew install \
   gradle
-
-# personal
-brew install \
-  youtube-dl
-brew cask install \
-  steam \
-  vlc \
-  vysor
