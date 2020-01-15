@@ -6,7 +6,7 @@ brew install \
   git \
   gpg \
   grep \
-  node@10 \
+  nvm \
   tmux \
   vim
 brew cask install \
@@ -22,3 +22,6 @@ brew cask install \
   vysor
 brew install \
   gradle
+
+# nvm
+mkdir -p "${HOME}/.nvm"

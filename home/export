@@ -8,3 +8,5 @@ export PS1="\[\033[0;37m\]\d \t \W\$ \[\033[0m\]"
 export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
 export PATH="${PATH}:/usr/local/share/android-sdk/platform-tools"
 export PATH="/usr/local/sbin:$PATH:$HOME/github/Qimatluo/Setting/bin"
+export ANDROID_SDK_ROOT="$(brew --prefix)/share/android-sdk/"
+export NVM_DIR="$HOME/.nvm"

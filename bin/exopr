@@ -12,15 +12,12 @@ pr=`curl -X POST -u $user:$token "https://api.github.com/repos/$owner/$repo/pull
 echo $pr
 number=`echo $pr | awk -F '"number": ' '{print $2}' | cut -d',' -f1`
 curl -X PATCH -u $user:$token "https://api.github.com/repos/$owner/$repo/issues/$number" -d '{"assignees":["'$user'"]}'
-reviewer=''
-if [ $repo == 'Parker-FTP-Mobile-App' ]; then reviewer='akiratsai'; fi
-if [ $repo == 'Parker-FTP-Seed' ]; then reviewer='akiratsai'; fi
-if [ $repo == 'Parker-FTP-Solution-Platform' ]; then reviewer='akiratsai'; fi
-if [ $repo == 'hamv_cloud' ]; then reviewer='henryloexo'; fi
-if [ $repo == 'hamv_admin' ]; then reviewer='raywang2'; fi
-if [ $repo == 'hamv_mobile' ]; then reviewer='raywang2'; fi
-if [ $repo == 'hamv_mobile_engine' ]; then reviewer='raywang2'; fi
-if [ $repo == 'Parker-IQAN-Solution' ]; then reviewer='ophentis'; fi
-if [ -n "$reviewer" ]; then
-  curl -X POST -u $user:$token "https://api.github.com/repos/$owner/$repo/pulls/$number/requested_reviewers" -d '{"reviewers":["'$reviewer'"]}'
+reviewers='[]'
+if [ $repo == 'hamv_cloud' ]; then reviewers='["exositeericlai"]'; fi
+if [ $repo == 'hamv_admin' ]; then reviewers='["raywang2"]'; fi
+if [ $repo == 'hamv_mobile' ]; then reviewers='["exositeericlai","raywang2"]'; fi
+if [ $repo == 'hamv_mobile_engine' ]; then reviewers='["exositeericlai","raywang2"]'; fi
+if [ $repo == 'semi_vertical_docs' ]; then reviewers='["florencelee922"]'; fi
+if [ -n "$reviewers" ]; then
+  curl -X POST -u $user:$token "https://api.github.com/repos/$owner/$repo/pulls/$number/requested_reviewers" -d '{"reviewers":'$reviewers'}'
 fi
