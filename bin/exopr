@@ -13,10 +13,10 @@ echo $pr
 number=`echo $pr | awk -F '"number": ' '{print $2}' | cut -d',' -f1`
 curl -X PATCH -u $user:$token "https://api.github.com/repos/$owner/$repo/issues/$number" -d '{"assignees":["'$user'"]}'
 reviewers='[]'
-if [ $repo == 'hamv_cloud' ]; then reviewers='["exositeericlai"]'; fi
-if [ $repo == 'hamv_admin' ]; then reviewers='["raywang2"]'; fi
-if [ $repo == 'hamv_mobile' ]; then reviewers='["exositeericlai","raywang2"]'; fi
-if [ $repo == 'hamv_mobile_engine' ]; then reviewers='["exositeericlai","raywang2"]'; fi
+if [ $repo == 'hamv_cloud' ]; then reviewers='["exositeericlai","austinyhc","sifeng86","guitarmind"]'; fi
+if [ $repo == 'hamv_admin' ]; then reviewers='["exositeericlai","austinyhc","sifeng86","guitarmind"]'; fi
+if [ $repo == 'hamv_mobile' ]; then reviewers='["exositeericlai","austinyhc","sifeng86","guitarmind"]'; fi
+if [ $repo == 'hamv_mobile_engine' ]; then reviewers='["exositeericlai","austinyhc","sifeng86","guitarmind"]'; fi
 if [ $repo == 'semi_vertical_docs' ]; then reviewers='["florencelee922"]'; fi
 if [ -n "$reviewers" ]; then
   curl -X POST -u $user:$token "https://api.github.com/repos/$owner/$repo/pulls/$number/requested_reviewers" -d '{"reviewers":'$reviewers'}'

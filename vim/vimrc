@@ -23,6 +23,7 @@ call vundle#end()
 filetype plugin indent on
 " ===} Vundle
 
+set noeol
 set colorcolumn=81
 set encoding=utf-8
 set hlsearch
