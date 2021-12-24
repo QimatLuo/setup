@@ -1,0 +1,76 @@
+[user]
+	name = Qimat Luo
+	email = qimatluo@westpharma.com
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = true
+[alias]
+	a = add
+	ap = add -p
+	au = add -u
+	b = branch
+	ba = branch -a
+	bd = branch -D
+	bl = blame
+	bm = branch -m
+	c = commit
+	ca = commit --amend
+	can = commit --amend --no-edit
+	cf = commit --fixup=HEAD
+	cl = clean
+	clf = clean -f
+	cld = clean -d
+	clfd = clean -fd
+	cm = commit -m
+	co = checkout
+	cob = checkout -b
+	cp = cherry-pick
+	cpa = cherry-pick --abort
+	cpc = cherry-pick --continue
+	d = diff
+	dc = diff --cached
+	f = fetch -p --all
+	ft = fetch --prune origin "+refs/tags/*:refs/tags/*"
+	l = log --decorate
+	lp = log --decorate --oneline --first-parent
+	lt = log --decorate --oneline --graph
+	m = merge
+	ma = merge --abort
+	mnf = merge --no-ff
+	mt = mergetool
+	ph = push
+	phh = push origin HEAD
+	pht = push origin --tags
+	pl = pull
+	r = rebase
+	ra = rebase --abort
+	rc = rebase --continue
+	ria = rebase --interactive --autosquash
+	rs = reset
+	rsh = reset HEAD^ --hard
+	s = status
+	sb = show-branch
+	sh = stash
+	shl = stash list
+	shp = stash pop
+	ss = show
+	t = tag
+	ta = tag -a
+	td = tag -d
+[core]
+	autocrlf = input
+	editor = nvim
+	pager = less -+X -+F
+[branch]
+	autosetuprebase = remote
+[merge]
+	tool = nvimdiff
+	conflictstyle = diff3
+	ff = false
+[mergetool "nvimdiff"]
+	cmd = nvim -d "$MERGED"
+[credential]
+	helper = store
