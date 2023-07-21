@@ -1,3 +1,5 @@
+sudo apt install tmuxinator
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/QimatLuo/tmux ~/.config/tmux
-source "$HOME/.tmux/plugins/tpm/bin/install_plugins"
+source ~/.tmux/plugins/tpm/bin/install_plugins
+echo 'source ~/github/QimatLuo/setup/tmux/bashrc.sh' >> ~/.bashrc

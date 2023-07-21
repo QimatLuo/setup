@@ -1,2 +1,2 @@
-rm "$HOME/.gitconfig"
-ln -s "$PWD/git/gitconfig" "$HOME/.gitconfig"
+rm -f ~/.gitconfig
+ln -s ~/github/QimatLuo/setup/git/gitconfig ~/.gitconfig

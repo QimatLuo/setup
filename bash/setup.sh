@@ -1,1 +1,1 @@
-echo 'source "'$PWD'/bash/bashrc.sh"' >> "$HOME/.bashrc"
+echo 'source ~/github/QimatLuo/setup/bash/bashrc.sh' >> ~/.bashrc
