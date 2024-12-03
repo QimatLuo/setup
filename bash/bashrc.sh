@@ -7,3 +7,5 @@ export PATH="$PATH:$HOME/.bin"
 
 alias grep='grep --color=auto --exclude-dir=node_modules --exclude-dir=dist --exclude-dir=.git'
 stty -ixon
+alias pbcopy='powershell.exe -Command "Set-Clipboard -Value \$input"'
+alias pbpaste='powershell.exe -Command "Get-Clipboard"'
