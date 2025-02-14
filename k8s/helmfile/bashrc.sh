@@ -1,0 +1,1 @@
+source <(helmfile completion bash)
