@@ -66,6 +66,7 @@
 	pager = less -+X -+F
 [branch]
 	autosetuprebase = remote
+	sort = committerdate
 [merge]
 	tool = nvimdiff
 	conflictstyle = diff3
@@ -74,3 +75,13 @@
 	cmd = nvim -d "$MERGED"
 [credential]
 	helper = store
+[rebase]
+	autosquash = true
+	autostash = true
+[commit]
+	verbose = true
+[diff]
+	colorMoved = true
+	algorithm = histogram
+[grep]
+	patternType = perl
